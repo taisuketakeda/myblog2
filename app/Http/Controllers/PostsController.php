@@ -15,7 +15,7 @@ class PostsController extends Controller
     public function index()
     {
         //$posts = Post::all();
-        $posts = Post::latest()->get();
+        $posts = Post::all();
         //$posts = [];
         //dd($posts->toArray());
         return view('posts.index')->with('posts',$posts);
@@ -50,7 +50,10 @@ class PostsController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        //$post=Post::findOrFail($post);
+
+        //dd(Post::find($post)->toArray());
+        return view('posts.show')->with('post',$post);
     }
 
     /**
