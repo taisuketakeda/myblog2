@@ -14,7 +14,11 @@ class PostsController extends Controller
      */
     public function index()
     {
-        return "hello";
+        //$posts = Post::all();
+        $posts = Post::latest()->get();
+        //$posts = [];
+        //dd($posts->toArray());
+        return view('posts.index')->with('posts',$posts);
     }
 
     /**
