@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>Blog Posts</title>
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-    <div class="container">
-    <h1>Blog Posts</h1>
+@extends('layouts.default')
+
+@section('title')
+Blog Posts
+@endsection
+
+
+
+@section('content')
+<h1>Blog Posts</h1>
         <ul>
             
             {{--@foreach($posts as $post)
@@ -27,8 +27,4 @@
             @endforelse
          </ul>
 
-
-
-    </div>
-</body>
-</html>
+@endsection
