@@ -24,3 +24,13 @@ ul > li{
     font-size: 12px;
     font-weight: normal;
 }
+
+input[type="text"],textarea{
+    box-sizing: border-box;
+    width: 400px;
+    padding: 5px;
+}
+
+textarea{
+    height: 120px;
+}

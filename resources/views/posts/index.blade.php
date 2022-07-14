@@ -7,7 +7,10 @@ Blog Posts
 
 
 @section('content')
-<h1>Blog Posts</h1>
+<h1>
+    Blog Posts
+    <a class="back" href="{{ url('/posts/create') }}">New</a>
+</h1>
         <ul>
             
             {{--@foreach($posts as $post)
