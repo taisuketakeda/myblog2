@@ -14,3 +14,6 @@
 Route::get('/','PostsController@index');
 Route::get('/posts/{post}','PostsController@show')->where('post','[0-9]+');
 Route::get('/posts/create','PostsController@create');
+Route::post('/posts','PostsController@store');
+Route::get('/posts/edit/{post}','PostsController@edit')->where('post','[0-9]+');
+Route::patch('/posts/update/{post}','PostsController@update');

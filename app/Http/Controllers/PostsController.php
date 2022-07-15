@@ -39,7 +39,22 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+
+            'title'=>'required|min:3',
+            'body'=>'required|min:3',
+
+        ]);
+
+
+        $post=Post::create([
+
+            "title" => $request->title,
+            "body"  => $request->body,
+
+        ]);
+
+        return redirect('/');
     }
 
     /**
@@ -64,7 +79,7 @@ class PostsController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('posts.edit')->with('post',$post);
     }
 
     /**
@@ -76,7 +91,18 @@ class PostsController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+
+
+        $this->validate($request,[
+
+            'title'=>'required|min:3',
+            'body'=>'required|min:3',
+
+        ]);
+        $post->title = $request->title;
+        $post->body = $request->body;
+        $post->save();
+        return redirect('/');
     }
 
     /**
