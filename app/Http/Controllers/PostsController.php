@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
+use App\Http\Requests\PostRequest;
 
 class PostsController extends Controller
 {
@@ -37,14 +38,14 @@ class PostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
-        $this->validate($request,[
+        //$this->validate($request,[
 
-            'title'=>'required|min:3',
-            'body'=>'required|min:3',
+            //'title'=>'required|min:3',
+           // 'body'=>'required|min:3',
 
-        ]);
+        //]);
 
 
         $post=Post::create([
@@ -89,16 +90,18 @@ class PostsController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(PostRequest $request, Post $post)
     {
 
 
-        $this->validate($request,[
+        //$this->validate($request,[
 
-            'title'=>'required|min:3',
-            'body'=>'required|min:3',
+            //'title'=>'required|min:3',
+            //'body'=>'required|min:3',
 
-        ]);
+        //]);
+
+
         $post->title = $request->title;
         $post->body = $request->body;
         $post->save();

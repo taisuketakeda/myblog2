@@ -17,7 +17,7 @@
             <div>
                 <label for="name">タイトル</label>
                 @if($errors->has('title'))
-                <br><span class="error" >{{ $errors->first('title')}}</span>
+                     <br><span class="error" >{{ $errors->first('title') }}</span>
                 @endif
                 <input type="text" name="title" value="{{ old('title',$post->title ) }}" placeholder="タイトルを入力してね">
             </div>
