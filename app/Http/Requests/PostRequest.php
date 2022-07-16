@@ -34,7 +34,7 @@ class PostRequest extends FormRequest
         return[
 
             'title.required' => 'タイトルを書いてね',
-            'title.size:3' => 'タイトルを３文字以上のものを書いてね',
+            'title.size:3' => 'タイトルが３文字以上のものを書いてね',
        
 
             'body.required' => '内容を書いてね',
