@@ -11,7 +11,7 @@
             //console.log(e);
             e.preventDefault();
 
-            if(confirm('消してもいいの？')){
+            if(confirm('投稿を削除しますか？')){
 
             
                 document.getElementById('form_'+this.dataset.id).submit();

@@ -9,7 +9,7 @@ Blog Posts
 @section('content')
 <h1>
     Blog Posts
-    <a class="back" href="{{ url('/posts/create') }}">New</a>
+    <a class="back" href="{{ url('/posts/create') }}">新規作成</a>
 </h1>
         <ul>
             
@@ -25,8 +25,8 @@ Blog Posts
             
             <li>
                 <a href="{{action('PostsController@show',$post)}}">{{$post->title}}</a>
-                <a href="{{action('PostsController@edit',$post)}}">[Edit]</a>
-                <a href="#" class="del" data-id="{{ $post->id }}">[X]</a>
+                <a href="{{action('PostsController@edit',$post)}}">[編集]</a>
+                <a href="#" class="del" data-id="{{ $post->id }}">[削除]</a>
                     <form action="{{ url('/posts/delete', $post) }}" method="post"
                     id="form_{{ $post->id }}">
                     {{ csrf_field() }}

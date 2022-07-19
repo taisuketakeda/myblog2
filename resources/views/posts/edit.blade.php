@@ -8,7 +8,7 @@
 
 @section('content')
 <h1>
-    <a class="back" href="/">Back</a>
+    <a class="back" href="/">戻る</a>
     {{ $post->title }}
 </h1>
         <form method="post" action="{{ url('/posts/update',$post) }}">
