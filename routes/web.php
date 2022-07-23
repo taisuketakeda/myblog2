@@ -18,3 +18,5 @@ Route::post('/posts','PostsController@store');
 Route::get('/posts/edit/{post}','PostsController@edit')->where('post','[0-9]+');
 Route::patch('/posts/update/{post}','PostsController@update');
 Route::delete('/posts/delete/{post}','PostsController@destroy');
+Route::post('/posts/{post}/comments','CommentsController@store');
+Route::delete('/posts/{post}/comments/{comment}','CommentsController@destroy');
